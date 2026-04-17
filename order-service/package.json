@@ -1,0 +1,22 @@
+{
+  "name": "order-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.0",
+    "sequelize": "^6.37.8",
+    "sequelize-cli": "^6.6.5",
+    "uuid": "^13.0.0",
+    "zod": "^4.3.6"
+  }
+}

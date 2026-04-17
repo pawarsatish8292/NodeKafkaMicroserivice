@@ -1,0 +1,39 @@
+{"duration":"5ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"user-service","status":404,"timestamp":"2026-04-15T18:50:54.520Z","url":"/users"}
+{"env":"development","level":"info","message":"Received SIGINT. Starting graceful shutdown...","service":"user-service","timestamp":"2026-04-15T19:26:13.149Z"}
+{"env":"development","level":"info","message":"DB connected","service":"user-service","timestamp":"2026-04-15T19:26:16.856Z"}
+{"data":{"name":"satisangramsh pawar","phone":"9876654321","user_id":"2"},"env":"development","level":"info","message":"Creating user","service":"user-service","timestamp":"2026-04-15T19:26:44.511Z"}
+{"duration":"64ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"user-service","status":200,"timestamp":"2026-04-15T19:26:44.559Z","url":"/"}
+{"data":{"name":"satisangramsh pawar","phone":"9876654321","user_id":"4"},"env":"development","level":"info","message":"Creating user","service":"user-service","timestamp":"2026-04-15T19:29:29.063Z"}
+{"duration":"16ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"user-service","status":200,"timestamp":"2026-04-15T19:29:29.076Z","url":"/"}
+{"env":"development","level":"info","message":"Received SIGINT. Starting graceful shutdown...","service":"user-service","timestamp":"2026-04-15T19:39:26.652Z"}
+{"env":"development","level":"info","message":"DB connected","service":"user-service","timestamp":"2026-04-15T19:39:29.706Z"}
+{"duration":"6ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":404,"timestamp":"2026-04-15T19:41:00.265Z","url":"/4"}
+{"duration":"4ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":404,"timestamp":"2026-04-15T19:42:58.858Z","url":"/4"}
+{"env":"development","level":"info","message":"Received SIGINT. Starting graceful shutdown...","service":"user-service","timestamp":"2026-04-15T19:49:10.213Z"}
+{"env":"development","level":"info","message":"DB connected","service":"user-service","timestamp":"2026-04-15T19:49:33.093Z"}
+{"duration":"20ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":200,"timestamp":"2026-04-15T19:49:52.102Z","url":"/4"}
+{"duration":"5ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":200,"timestamp":"2026-04-15T19:49:54.690Z","url":"/4"}
+{"env":"development","level":"info","message":"Received SIGINT. Starting graceful shutdown...","service":"user-service","timestamp":"2026-04-15T19:51:45.800Z"}
+{"env":"development","level":"info","message":"DB connected","service":"user-service","timestamp":"2026-04-15T19:51:48.118Z"}
+{"duration":"21ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":200,"timestamp":"2026-04-15T19:51:55.909Z","url":"/1"}
+{"duration":"10ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":200,"timestamp":"2026-04-15T19:52:06.774Z","url":"/4"}
+{"env":"development","level":"info","message":"Received SIGINT. Starting graceful shutdown...","service":"user-service","timestamp":"2026-04-15T19:55:37.197Z"}
+{"env":"development","level":"info","message":"DB connected","service":"user-service","timestamp":"2026-04-15T19:55:39.897Z"}
+{"duration":"20ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":200,"timestamp":"2026-04-15T19:55:45.220Z","url":"/4"}
+{"duration":"8ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":200,"timestamp":"2026-04-15T19:55:51.040Z","url":"/1"}
+{"duration":"10ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":200,"timestamp":"2026-04-15T19:55:55.241Z","url":"/2"}
+{"env":"development","level":"info","message":"Received SIGINT. Starting graceful shutdown...","service":"user-service","timestamp":"2026-04-15T20:00:00.507Z"}
+{"env":"development","level":"info","message":"DB connected","service":"user-service","timestamp":"2026-04-15T20:00:03.346Z"}
+{"duration":"5ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":404,"timestamp":"2026-04-15T20:00:14.184Z","url":"/2"}
+{"env":"development","level":"info","message":"Received SIGINT. Starting graceful shutdown...","service":"user-service","timestamp":"2026-04-15T20:08:38.015Z"}
+{"env":"development","level":"info","message":"DB connected","service":"user-service","timestamp":"2026-04-15T20:08:41.156Z"}
+{"duration":"36ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":200,"timestamp":"2026-04-15T20:09:02.018Z","url":"/users/2"}
+{"data":{"name":"satisangramshasas pawar","phone":"9876654321","user_id":"5"},"env":"development","level":"info","message":"Creating user","service":"user-service","timestamp":"2026-04-15T20:10:38.862Z"}
+{"duration":"28ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"user-service","status":200,"timestamp":"2026-04-15T20:10:38.883Z","url":"/users"}
+{"duration":"19ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":200,"timestamp":"2026-04-15T20:10:49.489Z","url":"/users/5"}
+{"env":"development","level":"info","message":"Received SIGINT. Starting graceful shutdown...","service":"user-service","timestamp":"2026-04-15T20:20:05.726Z"}
+{"env":"development","level":"info","message":"DB connected","service":"user-service","timestamp":"2026-04-15T20:20:07.790Z"}
+{"duration":"19ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":200,"timestamp":"2026-04-15T20:20:13.049Z","url":"/users/5"}
+{"data":{"name":"poonam pawar","phone":"9876654321","user_id":"6"},"env":"development","level":"info","message":"Creating user","service":"user-service","timestamp":"2026-04-15T20:20:56.396Z"}
+{"duration":"27ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"user-service","status":200,"timestamp":"2026-04-15T20:20:56.418Z","url":"/users"}
+{"duration":"15ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":200,"timestamp":"2026-04-15T20:21:09.452Z","url":"/users/6"}

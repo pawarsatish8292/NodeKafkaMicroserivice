@@ -1,0 +1,5 @@
+{"env":"development","error":"No recipients defined","level":"error","message":"Email failed","orderId":35,"retryCount":0,"service":"unknown-service","timestamp":"2026-04-17T19:29:27.155Z"}
+{"env":"development","error":"No recipients defined","level":"error","message":"Email failed","orderId":35,"retryCount":1,"service":"unknown-service","timestamp":"2026-04-17T19:29:33.429Z"}
+{"env":"development","error":"No recipients defined","level":"error","message":"Email failed","orderId":35,"retryCount":2,"service":"unknown-service","timestamp":"2026-04-17T19:29:44.779Z"}
+{"env":"development","error":"No recipients defined","level":"error","message":"Email failed","orderId":35,"retryCount":3,"service":"unknown-service","timestamp":"2026-04-17T19:30:05.649Z"}
+{"env":"development","level":"error","message":"Moved to DLQ","orderId":35,"service":"unknown-service","timestamp":"2026-04-17T19:30:05.668Z"}
