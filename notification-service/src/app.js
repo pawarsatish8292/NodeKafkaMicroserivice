@@ -1,13 +1,18 @@
 require('dotenv').config();
 
 const express = require('express');
-const logger = require('../../common/logger.js');
+// const logger = require('../../common/logger.js');
+
+const {
+  processHandlers,
+  logger,
+} = require('@satish/common');
 
 // 🔥 Consumers
 const runNotificationConsumer = require('./consumers/notification.consumer.js');
 
 // 🔥 Graceful shutdown (reuse common)
-const processHandlers = require('../../common/processHandlers.js');
+// const processHandlers = require('../../common/processHandlers.js');
 
 const app = express();
 

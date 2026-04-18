@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "/Users/poonampawar/Desktop/2026 project/microservices/notification-service/logs/notification-service/.86e51ebe361cbb6d417db995787017117209ffde-audit.json",
+    "files": [
+        {
+            "date": 1776469208384,
+            "name": "/Users/poonampawar/Desktop/2026 project/microservices/notification-service/logs/notification-service/error-2026-04-18.log",
+            "hash": "d558bcb3be80a6375ce089b2be93aecee54313259d1fe1e533a87a2effe8269b"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,7 +1,13 @@
-const { startConsumer } = require('../../../common/kafkaConsumer.js');
-const { sendMessage } = require('../../../common/kafkaProducer.js');
+// const { startConsumer } = require('../../../common/kafkaConsumer.js');
+// const { sendMessage } = require('../../../common/kafkaProducer.js');
 const sendEmail = require('../utils/email.js');
-const logger = require('../../../common/logger.js');
+// const logger = require('../../../common/logger.js');
+
+
+const {
+  logger,
+  kafka
+} = require('@satish/common');
 
 const { isProcessed, markProcessed } = require('../utils/idempotency.js');
 
@@ -55,7 +61,7 @@ const handleNotification = async (data) => {
       // 🔥 DELAY (simple version)
       await new Promise(res => setTimeout(res, delay));
 
-      await sendMessage({
+      await kafka.sendMessage({
         topic: 'notification-retry',
         key: data.orderId,
         value: {
@@ -66,7 +72,7 @@ const handleNotification = async (data) => {
 
     } else {
       // ☠️ DLQ
-      await sendMessage({
+      await kafka.sendMessage({
         topic: 'notification-dlq',
         key: data.orderId,
         value: data,
@@ -83,14 +89,14 @@ const handleNotification = async (data) => {
 const run = async () => {
 
   // 🔥 MAIN
-  await startConsumer({
+  await kafka.startConsumer({
     groupId: 'notification-group',
     topic: 'payment-success',
     handler: handleNotification,
   });
 
   // 🔁 RETRY
-  await startConsumer({
+  await kafka.startConsumer({
     groupId: 'notification-retry-group',
     topic: 'notification-retry',
     handler: handleNotification,

@@ -1,0 +1,31 @@
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":106,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T00:38:50.387Z"}
+{"env":"development","error":"Greeting never received","level":"error","message":"Email failed","orderId":49,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T00:54:33.180Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":78,"retryCount":1,"service":"notification-service","timestamp":"2026-04-18T01:09:59.718Z"}
+{"env":"development","error":"Greeting never received","level":"error","message":"Email failed","orderId":97,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T01:25:24.371Z"}
+{"env":"development","error":"Greeting never received","level":"error","message":"Email failed","orderId":119,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T01:40:48.369Z"}
+{"env":"development","error":"Greeting never received","level":"error","message":"Email failed","orderId":153,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T01:56:22.571Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":178,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T02:11:47.140Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":195,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T02:24:42.131Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":207,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T02:40:05.153Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":224,"retryCount":1,"service":"notification-service","timestamp":"2026-04-18T02:55:29.852Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":244,"retryCount":3,"service":"notification-service","timestamp":"2026-04-18T03:10:56.198Z"}
+{"env":"development","level":"error","message":"Moved to DLQ","orderId":244,"service":"notification-service","timestamp":"2026-04-18T03:10:56.431Z"}
+{"env":"development","error":"Greeting never received","level":"error","message":"Email failed","orderId":273,"retryCount":1,"service":"notification-service","timestamp":"2026-04-18T03:25:42.966Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":114,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T03:56:03.881Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":114,"retryCount":1,"service":"notification-service","timestamp":"2026-04-18T04:11:12.938Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":116,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T04:11:12.942Z"}
+{"env":"development","error":"Greeting never received","level":"error","message":"Email failed","orderId":118,"retryCount":2,"service":"notification-service","timestamp":"2026-04-18T04:26:44.661Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":138,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T05:15:17.707Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":140,"retryCount":3,"service":"notification-service","timestamp":"2026-04-18T05:42:54.049Z"}
+{"env":"development","level":"error","message":"Moved to DLQ","orderId":140,"service":"notification-service","timestamp":"2026-04-18T05:42:54.422Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":150,"retryCount":2,"service":"notification-service","timestamp":"2026-04-18T05:58:06.938Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":155,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T06:28:33.973Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":161,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T06:43:42.113Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":166,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T06:59:24.145Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":182,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T07:14:48.018Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":214,"retryCount":2,"service":"notification-service","timestamp":"2026-04-18T07:29:34.382Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":217,"retryCount":2,"service":"notification-service","timestamp":"2026-04-18T07:44:59.608Z"}
+{"env":"development","error":"Timeout","level":"error","message":"Email failed","orderId":214,"retryCount":3,"service":"notification-service","timestamp":"2026-04-18T07:44:59.609Z"}
+{"env":"development","level":"error","message":"Moved to DLQ","orderId":214,"service":"notification-service","timestamp":"2026-04-18T07:44:59.836Z"}
+{"env":"development","error":"Greeting never received","level":"error","message":"Email failed","orderId":229,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T07:45:52.645Z"}
+{"env":"development","error":"read ECONNRESET","level":"error","message":"Email failed","orderId":115,"retryCount":0,"service":"notification-service","timestamp":"2026-04-18T07:54:59.329Z"}
