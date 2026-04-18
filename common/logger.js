@@ -1,23 +1,24 @@
 const fs = require('fs');
 const path = require('path');
 const { createLogger, format, transports } = require('winston');
+const DailyRotateFile = require('winston-daily-rotate-file');
 const config = require('./config');
 
 const { combine, timestamp, printf, errors, json } = format;
 
-// 🔥 ENV CONFIG
-const SERVICE_NAME = config.serviceName;
-const ENV = config.env;
-
-// 🔥 Ensure logs folder exists
-const logDir = path.join(process.cwd(), 'logs');
+// 🔥 Ensure logs folder exists (per service)
+const logDir = path.join(process.cwd(), 'logs', config.serviceName);
 if (!fs.existsSync(logDir)) {
-  fs.mkdirSync(logDir);
+  fs.mkdirSync(logDir, { recursive: true });
 }
 
-// 🔥 Console format
+// 🔥 Console format (human readable)
 const consoleFormat = printf(({ level, message, timestamp, stack, ...meta }) => {
-  let log = `${timestamp} [${level}] [${SERVICE_NAME}]: ${message}`;
+  let msg = typeof message === 'object'
+    ? JSON.stringify(message)
+    : message;
+
+  let log = `${timestamp} [${level}] [${config.serviceName}]: ${msg}`;
 
   if (Object.keys(meta).length) {
     log += ` ${JSON.stringify(meta)}`;
@@ -30,16 +31,16 @@ const consoleFormat = printf(({ level, message, timestamp, stack, ...meta }) => 
   return log;
 });
 
-// 🔥 Add global metadata
+// 🔥 Add metadata (for Loki / ELK)
 const addMeta = format((info) => {
-  info.service = SERVICE_NAME;
-  info.env = ENV;
+  info.service = config.serviceName;
+  info.env = config.env;
   return info;
 });
 
 const logger = createLogger({
-  level: process.env.LOG_LEVEL || 'info',
-  exitOnError: false, // 🔥 important for graceful shutdown
+  level: config.logLevel,
+  exitOnError: false,
 
   format: combine(
     timestamp(),
@@ -49,6 +50,7 @@ const logger = createLogger({
   ),
 
   transports: [
+    // 🔥 Console (dev)
     new transports.Console({
       format: combine(
         timestamp(),
@@ -57,14 +59,24 @@ const logger = createLogger({
       ),
     }),
 
-    new transports.File({
-      filename: path.join(logDir, 'error.log'),
-      level: 'error',
+    // 🔥 INFO logs (rotated daily)
+    new DailyRotateFile({
+      filename: path.join(logDir, 'app-%DATE%.log'),
+      datePattern: 'YYYY-MM-DD',
+      level: 'info',
+      maxSize: '20m',     // 🔥 rotate if >20MB
+      maxFiles: '14d',    // 🔥 keep 14 days
+      zippedArchive: true // 🔥 compress old logs
     }),
 
-    new transports.File({
-      filename: path.join(logDir, 'combined.log'),
-      level: 'info', // 🔥 FIX
+    // 🔥 ERROR logs (separate file)
+    new DailyRotateFile({
+      filename: path.join(logDir, 'error-%DATE%.log'),
+      datePattern: 'YYYY-MM-DD',
+      level: 'error',
+      maxSize: '20m',
+      maxFiles: '30d',
+      zippedArchive: true
     }),
   ],
 });

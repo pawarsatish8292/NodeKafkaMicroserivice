@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "/Users/poonampawar/Desktop/2026 project/microservices/order-service/logs/order-service/.9ccabe97383e3d0c2297ff601d7e12dd7467bfd8-audit.json",
+    "files": [
+        {
+            "date": 1776469220274,
+            "name": "/Users/poonampawar/Desktop/2026 project/microservices/order-service/logs/order-service/error-2026-04-18.log",
+            "hash": "02d5768d8528a89414943b2822b0bd9bedd1eaeb890edd91b794e6325aa2d8cd"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -2,9 +2,9 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const repo = require('../repositories/user.repository.js');
-const AppError = require('../../../common/AppError.js');
-const logger = require('../../../common/logger.js');
-const { callService } = require('../../../common/httpClient');
+// const AppError = require('../../../common/AppError.js');
+// const logger = require('../../../common/logger.js');
+const { http, logger, AppError} = require('@satish/common');
 
 exports.register = async (data) => {
   const hashedPassword = await bcrypt.hash(data.password, 10);
@@ -14,7 +14,7 @@ exports.register = async (data) => {
     password: hashedPassword,
   });
 
-  const response = await callService({
+  const response = await http.callService({
     method: 'POST',
     url: 'http://localhost:3002/users',
     data: {

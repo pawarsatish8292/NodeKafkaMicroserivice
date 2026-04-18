@@ -1,6 +1,11 @@
-const { startConsumer } = require('../../../common/kafkaConsumer.js');
-const { sendMessage } = require('../../../common/kafkaProducer.js');
-const logger = require('../../../common/logger.js');
+// const { startConsumer } = require('../../../common/kafkaConsumer.js');
+// const { sendMessage } = require('../../../common/kafkaProducer.js');
+// const logger = require('../../../common/logger.js');
+
+const {
+  logger,
+  kafka
+} = require('@satish/common');
 
 const MAX_RETRY = 3;
 
@@ -10,7 +15,7 @@ const processPayment = async (data) => {
   if (Math.random() < 0.5) {
     throw new Error('Payment failed');
   }
- // return true;
+ return true;
 };
 
 // 🔥 Main handler
@@ -19,7 +24,7 @@ const handlePayment = async (data) => {
     await processPayment(data);
 
     // ✅ Success → publish success event
-    await sendMessage({
+    await kafka.sendMessage({
       topic: 'payment-success',
       key: data.orderId,
       value: data,
@@ -33,7 +38,7 @@ const handlePayment = async (data) => {
 
     if (retryCount < MAX_RETRY) {
       // 🔁 Send to retry topic
-      await sendMessage({
+      await kafka.sendMessage({
         topic: 'payment-retry',
         key: data.orderId,
         value: {
@@ -44,7 +49,7 @@ const handlePayment = async (data) => {
 
     } else {
       // ☠️ Send to DLQ
-      await sendMessage({
+      await kafka.sendMessage({
         topic: 'payment-dlq',
         key: data.orderId,
         value: data,
@@ -59,14 +64,14 @@ const handlePayment = async (data) => {
 const run = async () => {
 
   // Main topic
-  await startConsumer({
+  await kafka.startConsumer({
     groupId: 'payment-group',
     topic: 'order-created',
     handler: handlePayment,
   });
 
   // Retry topic
-  await startConsumer({
+  await kafka.startConsumer({
     groupId: 'payment-retry-group',
     topic: 'payment-retry',
     handler: handlePayment,

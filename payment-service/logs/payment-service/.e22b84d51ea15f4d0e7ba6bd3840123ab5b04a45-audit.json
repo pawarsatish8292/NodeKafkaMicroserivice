@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/poonampawar/Desktop/2026 project/microservices/payment-service/logs/payment-service/.e22b84d51ea15f4d0e7ba6bd3840123ab5b04a45-audit.json",
+    "files": [
+        {
+            "date": 1776469214144,
+            "name": "/Users/poonampawar/Desktop/2026 project/microservices/payment-service/logs/payment-service/app-2026-04-18.log",
+            "hash": "7c10c0b759be63ae7547192bfaebd747f81aeec03dba9029596db18a6b05ec0b"
+        }
+    ],
+    "hashType": "sha256"
+}

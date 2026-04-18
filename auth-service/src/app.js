@@ -3,14 +3,24 @@ require('dotenv').config();
 
 const express = require('express');
 const sequelize = require('./config/db.js');
-const processHandlers = require('../../common/processHandlers.js');
-const errorMiddleware = require('../../common/error.middleware.js')
-const logger = require('../../common/logger.js');
-const requestLogger = require('../../common/requestLogger.middleware.js');
+// const processHandlers = require('../../common/processHandlers.js');
+// const errorMiddleware = require('../../common/error.middleware.js')
+//const logger = require('../../common/logger.js');
+// const requestLogger = require('../../common/requestLogger.middleware.js');
+
+const {
+  middleware,
+  processHandlers,
+  logger,
+  http,
+  AppError,
+  asyncHandler,
+  httpClient
+} = require('@satish/common');
 
 const app = express();
 
-app.use(requestLogger);
+app.use(middleware.requestLogger);
 app.use(express.json());
 // WHY: Parse incoming JSON body
 
@@ -37,7 +47,7 @@ app.get('/health', (req, res) => {
 });
 // WHY: Health check for Kubernetes / monitoring
 
-app.use(errorMiddleware);
+app.use(middleware.error);
 
 const PORT = process.env.PORT || 3001;
 

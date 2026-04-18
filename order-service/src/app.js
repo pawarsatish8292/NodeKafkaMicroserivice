@@ -1,11 +1,17 @@
 require('dotenv').config();
 
 const express = require('express');
-const logger = require('../../common/logger.js');
+// const logger = require('../../common/logger.js');
 const sequelize = require('./config/db.js');
-const errorMiddleware = require('../../common/error.middleware.js');
-const requestLogger = require('../../common/requestLogger.middleware.js');
-const processHandlers = require('../../common/processHandlers.js');
+// const errorMiddleware = require('../../common/error.middleware.js');
+// const requestLogger = require('../../common/requestLogger.middleware.js');
+// const processHandlers = require('../../common/processHandlers.js');
+
+const {
+  middleware,
+  processHandlers,
+  logger
+} = require('@satish/common');
 
 // 🔥 Consumers
 const runOrderConsumer = require('./consumers/order.consumer.js');
@@ -23,7 +29,7 @@ app.use((req, res, next) => {
 
   next();
 });
-app.use(requestLogger);
+app.use(middleware.requestLogger);
 app.use(express.json());
 
 // routes
@@ -35,7 +41,7 @@ app.get('/health', (req, res) => {
   res.send('Order Service Running');
 });
 
-app.use(errorMiddleware);
+app.use(middleware.error);
 
 const PORT = process.env.PORT || 3003;
 

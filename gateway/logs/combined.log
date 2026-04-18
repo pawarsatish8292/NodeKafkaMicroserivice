@@ -76,3 +76,17 @@
 {"duration":"17ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T20:36:46.431Z","url":"/orders"}
 {"duration":"12ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T20:36:47.718Z","url":"/orders"}
 {"duration":"12ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T20:36:48.429Z","url":"/orders"}
+{"duration":"37ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":401,"timestamp":"2026-04-17T21:37:00.888Z","url":"/orders"}
+{"duration":"1ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":401,"timestamp":"2026-04-17T21:37:01.807Z","url":"/orders"}
+{"duration":"272ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T21:37:06.856Z","url":"/auth/login"}
+{"duration":"240ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T21:37:30.149Z","url":"/orders"}
+{"duration":"36ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T21:37:31.204Z","url":"/orders"}
+{"duration":"12ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T21:37:32.016Z","url":"/orders"}
+{"duration":"16ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T21:37:33.473Z","url":"/orders"}
+{"duration":"42ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T21:37:34.393Z","url":"/orders"}
+{"duration":"43ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T21:38:41.586Z","url":"/orders"}
+{"duration":"18ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T21:38:42.675Z","url":"/orders"}
+{"duration":"9ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T21:38:43.451Z","url":"/orders"}
+{"duration":"215ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T22:02:36.753Z","url":"/orders"}
+{"duration":"57ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T22:02:39.386Z","url":"/orders"}
+{"duration":"158ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"unknown-service","status":200,"timestamp":"2026-04-17T23:21:23.346Z","url":"/auth/login"}

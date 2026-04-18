@@ -38,3 +38,5 @@
 {"duration":"111ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":200,"timestamp":"2026-04-17T19:29:06.383Z","url":"/login"}
 {"duration":"179ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":200,"timestamp":"2026-04-17T20:31:52.162Z","url":"/login"}
 {"duration":"112ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":200,"timestamp":"2026-04-17T20:32:28.336Z","url":"/login"}
+{"duration":"209ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":200,"timestamp":"2026-04-17T21:37:06.855Z","url":"/login"}
+{"env":"development","level":"info","message":"Received SIGINT. Starting graceful shutdown...","service":"auth-service","timestamp":"2026-04-17T23:14:01.189Z"}

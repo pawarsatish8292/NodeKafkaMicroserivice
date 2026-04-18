@@ -5,13 +5,16 @@ const proxyRoutes = require('./routes/proxy.routes.js');
 const helmet = require('helmet');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
-const requestLogger = require('../../common/requestLogger.middleware.js');
+// const requestLogger = require('../../common/requestLogger.middleware.js');
+const {
+  middleware
+} = require('@satish/common');
 
 const app = express();
 
 // 🔐 1. Secure headers
 app.use(helmet());
-app.use(requestLogger);
+app.use(middleware.requestLogger);
 // WHY: prevents XSS, clickjacking, MIME sniffing
 
 // 🌍 2. CORS config

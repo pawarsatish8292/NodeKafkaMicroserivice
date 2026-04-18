@@ -1,6 +1,10 @@
 const { popBatch, size } = require('../utils/queue.js');
-const logger = require('../../../common/logger.js');
-const { sendMessage } = require('../../../common/kafkaProducer.js');
+// const logger = require('../../../common/logger.js');
+// const { sendMessage } = require('../../../common/kafkaProducer.js');
+const {
+  logger,
+  kafka
+} = require('@satish/common');
 
 // 🔥 Simulate payment logic
 const processPayment = async (data) => {
@@ -20,7 +24,7 @@ const processBatch = async () => {
       // simulate processing
       await processPayment(data);
 
-      await sendMessage({
+      await kafka.sendMessage({
         topic: 'payment-success',
         key: data.orderId,
         value: data,

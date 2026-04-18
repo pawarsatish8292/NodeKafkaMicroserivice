@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/poonampawar/Desktop/2026 project/microservices/gateway/logs/unknown-service/.c53e4777d2d84f676ea85e6c1b9376441104e252-audit.json",
+    "files": [
+        {
+            "date": 1776469240830,
+            "name": "/Users/poonampawar/Desktop/2026 project/microservices/gateway/logs/unknown-service/app-2026-04-18.log",
+            "hash": "e1e27967fc83f2b481baf4ba37a92877ff54ad725a42eb3d7723eb352bec429d"
+        }
+    ],
+    "hashType": "sha256"
+}

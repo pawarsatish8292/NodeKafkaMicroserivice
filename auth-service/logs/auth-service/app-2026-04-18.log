@@ -1,0 +1,17 @@
+{"env":"development","level":"info","message":"DB connected","service":"auth-service","timestamp":"2026-04-17T23:20:57.671Z"}
+{"duration":"126ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":200,"timestamp":"2026-04-17T23:21:23.342Z","url":"/login"}
+{"duration":"1ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":404,"timestamp":"2026-04-17T23:21:30.883Z","url":"/auth/login"}
+{"duration":"1ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":404,"timestamp":"2026-04-17T23:21:33.163Z","url":"/auth/login"}
+{"duration":"2ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":404,"timestamp":"2026-04-17T23:21:57.086Z","url":"/auth/login"}
+{"duration":"2ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":404,"timestamp":"2026-04-17T23:22:20.153Z","url":"/auth/login"}
+{"duration":"1ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":404,"timestamp":"2026-04-17T23:22:25.442Z","url":"/auth/login"}
+{"env":"development","level":"info","message":"Received SIGINT. Starting graceful shutdown...","service":"auth-service","timestamp":"2026-04-17T23:23:54.755Z"}
+{"env":"development","level":"info","message":"DB connected","service":"auth-service","timestamp":"2026-04-17T23:23:56.962Z"}
+{"duration":"5ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":404,"timestamp":"2026-04-17T23:24:02.114Z","url":"/auth/login"}
+{"duration":"131ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":200,"timestamp":"2026-04-17T23:24:13.307Z","url":"/login"}
+{"duration":"112ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":200,"timestamp":"2026-04-17T23:30:01.365Z","url":"/login"}
+{"env":"development","level":"info","message":"Received SIGINT. Starting graceful shutdown...","service":"auth-service","timestamp":"2026-04-17T23:35:42.999Z"}
+{"env":"development","level":"info","message":"DB connected","service":"auth-service","timestamp":"2026-04-17T23:40:45.827Z"}
+{"duration":"10ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":404,"timestamp":"2026-04-18T00:05:15.680Z","url":"/auth/login"}
+{"duration":"176ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":200,"timestamp":"2026-04-18T00:05:21.918Z","url":"/login"}
+{"duration":"119ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"auth-service","status":200,"timestamp":"2026-04-18T00:06:07.775Z","url":"/login"}

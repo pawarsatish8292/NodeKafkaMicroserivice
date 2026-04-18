@@ -1,5 +1,7 @@
 const service = require('../services/auth.service.js');
-const asyncHandler = require('../../../common/asyncHandler.js');
+// const asyncHandler = require('../../../common/asyncHandler.js');
+
+const { asyncHandler } = require('@satish/common');
 
 exports.register = asyncHandler(async (req, res) => {
   const result = await service.register(req.body);

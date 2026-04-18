@@ -1,7 +1,12 @@
 const { v4: uuidv4 } = require('uuid');
 const Order = require('../models/order.model.js');
-const logger = require('../../../common/logger.js');
-const AppError = require('../../../common/AppError.js');
+// const logger = require('../../../common/logger.js');
+// const AppError = require('../../../common/AppError.js');
+
+const {
+  logger,
+  AppError
+} = require('@satish/common');
 
 const { sendMessage } = require('../../../common/kafkaProducer.js');
 

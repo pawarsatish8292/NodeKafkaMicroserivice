@@ -37,3 +37,4 @@
 {"data":{"name":"poonam pawar","phone":"9876654321","user_id":"6"},"env":"development","level":"info","message":"Creating user","service":"user-service","timestamp":"2026-04-15T20:20:56.396Z"}
 {"duration":"27ms","env":"development","level":"info","message":"Incoming Request","method":"POST","service":"user-service","status":200,"timestamp":"2026-04-15T20:20:56.418Z","url":"/users"}
 {"duration":"15ms","env":"development","level":"info","message":"Incoming Request","method":"GET","service":"user-service","status":200,"timestamp":"2026-04-15T20:21:09.452Z","url":"/users/6"}
+{"env":"development","level":"info","message":"Received SIGINT. Starting graceful shutdown...","service":"user-service","timestamp":"2026-04-17T23:39:15.406Z"}

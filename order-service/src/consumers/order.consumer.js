@@ -1,5 +1,10 @@
-const { startConsumer } = require('../../../common/kafkaConsumer.js');
-const logger = require('../../../common/logger.js');
+// const { startConsumer } = require('../../../common/kafkaConsumer.js');
+// const logger = require('../../../common/logger.js');
+
+const {
+  logger,
+  kafka
+} = require('@satish/common');
 const service = require('../services/order.service.js');
 
 // ✅ PAYMENT SUCCESS
@@ -60,21 +65,21 @@ const handleDLQ = async (data) => {
 const run = async () => {
 
   // ✅ SUCCESS
-  await startConsumer({
+  await kafka.startConsumer({
     groupId: 'order-success-group',
     topic: 'payment-success',
     handler: handleSuccess,
   });
 
   // ❌ FAILED
-  await startConsumer({
+  await kafka.startConsumer({
     groupId: 'order-failed-group',
     topic: 'payment-failed',
     handler: handleFailed,
   });
 
   // ☠️ DLQ
-  await startConsumer({
+  await kafka.startConsumer({
     groupId: 'order-dlq-group',
     topic: 'payment-dlq',
     handler: handleDLQ,
