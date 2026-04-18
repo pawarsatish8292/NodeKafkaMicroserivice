@@ -1,0 +1,20 @@
+# dependencies
+node_modules
+
+# logs
+logs
+*.log
+
+# env files
+.env
+
+# git
+.git
+.gitignore
+
+# docker
+Dockerfile
+docker-compose.yml
+
+# OS files
+.DS_Store

@@ -1164,3 +1164,43 @@
 {"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":0,"service":"payment-service","timestamp":"2026-04-18T00:54:35.478Z"}
 {"env":"development","level":"info","message":"Message received","partition":0,"service":"payment-service","timestamp":"2026-04-18T00:54:35.482Z","topic":"payment-retry"}
 {"amount":3300,"email":"svpsatish5@gmail.com","env":"development","eventId":"adb9a746-d35a-45d0-87db-fc3e7bdbb61c","level":"info","message":"Payment success","orderId":273,"retryCount":1,"service":"payment-service","status":"PENDING","timestamp":"2026-04-18T00:54:35.485Z","userId":1}
+{"env":"development","level":"info","message":"Payment Service running on 3004","service":"payment-service","timestamp":"2026-04-18T10:19:51.269Z"}
+{"env":"development","level":"info","message":"Kafka consumer started","service":"payment-service","timestamp":"2026-04-18T10:19:57.373Z"}
+{"env":"development","level":"info","message":"Message received","partition":2,"service":"payment-service","timestamp":"2026-04-18T10:21:21.941Z","topic":"order-created"}
+{"env":"development","level":"info","message":"Kafka Producer connected","service":"payment-service","timestamp":"2026-04-18T10:21:21.954Z"}
+{"amount":3300,"email":"svpsatish5@gmail.com","env":"development","eventId":"2bfa5835-ba0b-4332-83f8-1327f4cfc505","level":"info","message":"Payment success","orderId":274,"service":"payment-service","status":"PENDING","timestamp":"2026-04-18T10:21:21.967Z","userId":1}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"payment-service","timestamp":"2026-04-18T10:22:17.276Z","topic":"order-created"}
+{"amount":3300,"email":"svpsatish5@gmail.com","env":"development","eventId":"052b5fe1-7999-45f0-ad50-70dd47ed3e46","level":"info","message":"Payment success","orderId":275,"service":"payment-service","status":"PENDING","timestamp":"2026-04-18T10:22:17.280Z","userId":1}
+{"env":"development","level":"info","message":"Message received","partition":1,"service":"payment-service","timestamp":"2026-04-18T10:22:18.468Z","topic":"order-created"}
+{"amount":3300,"email":"svpsatish5@gmail.com","env":"development","eventId":"dfbb2b12-51bb-4b82-b5f2-78d64001b30d","level":"info","message":"Payment success","orderId":276,"service":"payment-service","status":"PENDING","timestamp":"2026-04-18T10:22:18.472Z","userId":1}
+{"env":"development","level":"info","message":"Payment Service running on 3004","service":"payment-service","timestamp":"2026-04-18T10:36:15.513Z"}
+{"env":"development","level":"info","message":"Kafka consumer started","service":"payment-service","timestamp":"2026-04-18T10:36:21.628Z"}
+{"env":"development","level":"info","message":"Message received","partition":1,"service":"payment-service","timestamp":"2026-04-18T10:36:27.378Z","topic":"order-created"}
+{"env":"development","level":"info","message":"Kafka Producer connected","service":"payment-service","timestamp":"2026-04-18T10:36:27.384Z"}
+{"amount":4400,"email":"svpsatish5@gmail.com","env":"development","eventId":"a625db32-0e67-4113-b10c-b864ebc8ca70","level":"info","message":"Payment success","orderId":277,"service":"payment-service","status":"PENDING","timestamp":"2026-04-18T10:36:27.400Z","userId":1}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"payment-service","timestamp":"2026-04-18T10:37:45.112Z","topic":"order-created"}
+{"amount":4400,"email":"shindepoonam1998@gmail.com","env":"development","eventId":"074dc309-cd06-4028-a006-54df566af879","level":"info","message":"Payment success","orderId":278,"service":"payment-service","status":"PENDING","timestamp":"2026-04-18T10:37:45.117Z","userId":1}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"payment-service","timestamp":"2026-04-18T10:37:46.740Z","topic":"order-created"}
+{"amount":4400,"email":"shindepoonam1998@gmail.com","env":"development","eventId":"a1899634-cdec-4c13-9673-7862d50de79f","level":"info","message":"Payment success","orderId":279,"service":"payment-service","status":"PENDING","timestamp":"2026-04-18T10:37:46.743Z","userId":1}
+{"env":"development","level":"info","message":"Message received","partition":1,"service":"payment-service","timestamp":"2026-04-18T10:39:14.604Z","topic":"order-created"}
+{"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":0,"service":"payment-service","timestamp":"2026-04-18T10:39:14.606Z"}
+{"env":"development","level":"info","message":"Message received","partition":1,"service":"payment-service","timestamp":"2026-04-18T10:39:14.624Z","topic":"payment-retry"}
+{"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":1,"service":"payment-service","timestamp":"2026-04-18T10:39:14.625Z"}
+{"env":"development","level":"info","message":"Message received","partition":1,"service":"payment-service","timestamp":"2026-04-18T10:39:14.633Z","topic":"payment-retry"}
+{"amount":4400,"email":"shindepoonam1998@gmail.com","env":"development","eventId":"792f8726-8e60-4bc8-8808-e761c4c64327","level":"info","message":"Payment success","orderId":280,"retryCount":2,"service":"payment-service","status":"PENDING","timestamp":"2026-04-18T10:39:14.636Z","userId":1}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"payment-service","timestamp":"2026-04-18T10:39:17.239Z","topic":"order-created"}
+{"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":0,"service":"payment-service","timestamp":"2026-04-18T10:39:17.240Z"}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"payment-service","timestamp":"2026-04-18T10:39:17.245Z","topic":"payment-retry"}
+{"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":1,"service":"payment-service","timestamp":"2026-04-18T10:39:17.245Z"}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"payment-service","timestamp":"2026-04-18T10:39:17.250Z","topic":"payment-retry"}
+{"amount":4400,"email":"shindepoonam1998@gmail.com","env":"development","eventId":"241a9d01-6cc2-4387-be77-b0fb8f1c93d1","level":"info","message":"Payment success","orderId":281,"retryCount":2,"service":"payment-service","status":"PENDING","timestamp":"2026-04-18T10:39:17.253Z","userId":1}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"payment-service","timestamp":"2026-04-18T10:39:17.750Z","topic":"order-created"}
+{"amount":4400,"email":"shindepoonam1998@gmail.com","env":"development","eventId":"ffa26871-02f4-404a-8f4d-e2ce53e33122","level":"info","message":"Payment success","orderId":282,"service":"payment-service","status":"PENDING","timestamp":"2026-04-18T10:39:17.753Z","userId":1}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"payment-service","timestamp":"2026-04-18T10:39:18.261Z","topic":"order-created"}
+{"amount":4400,"email":"shindepoonam1998@gmail.com","env":"development","eventId":"2d3aa8d9-6b6e-4558-aa5b-40f309b47948","level":"info","message":"Payment success","orderId":283,"service":"payment-service","status":"PENDING","timestamp":"2026-04-18T10:39:18.266Z","userId":1}
+{"env":"development","level":"info","message":"Message received","partition":2,"service":"payment-service","timestamp":"2026-04-18T10:39:18.602Z","topic":"order-created"}
+{"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":0,"service":"payment-service","timestamp":"2026-04-18T10:39:18.602Z"}
+{"env":"development","level":"info","message":"Message received","partition":2,"service":"payment-service","timestamp":"2026-04-18T10:39:18.608Z","topic":"payment-retry"}
+{"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":1,"service":"payment-service","timestamp":"2026-04-18T10:39:18.608Z"}
+{"env":"development","level":"info","message":"Message received","partition":2,"service":"payment-service","timestamp":"2026-04-18T10:39:18.615Z","topic":"payment-retry"}
+{"amount":4400,"email":"shindepoonam1998@gmail.com","env":"development","eventId":"c6ead2e6-f764-4506-b25d-cdfcddd4d86e","level":"info","message":"Payment success","orderId":284,"retryCount":2,"service":"payment-service","status":"PENDING","timestamp":"2026-04-18T10:39:18.618Z","userId":1}

@@ -3,14 +3,20 @@ require('dotenv').config();
 const express = require('express');
 const sequelize = require('./config/db.js');
 
-const logger = require('../../common/logger');
-const errorMiddleware = require('../../common/error.middleware');
-const processHandlers = require('../../common/processHandlers.js');
-const requestLogger = require('../../common/requestLogger.middleware');
+// const logger = require('../../common/logger');
+// const errorMiddleware = require('../../common/error.middleware');
+// const processHandlers = require('../../common/processHandlers.js');
+// const requestLogger = require('../../common/requestLogger.middleware');
+
+const {
+  middleware,
+  processHandlers,
+  logger
+} = require('@satish/common');
 
 const app = express();
 
-app.use(requestLogger);
+app.use(middleware.requestLogger);
 app.use(express.json());
 
 // routes
@@ -31,7 +37,7 @@ app.use((req, res, next) => {
 app.use('/users', userRoutes);
 
 // error handler
-app.use(errorMiddleware);
+app.use(middleware.error);
 
 const PORT = process.env.PORT || 3002;
 

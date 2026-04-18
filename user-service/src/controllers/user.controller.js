@@ -1,5 +1,8 @@
 const service = require('../services/user.service');
-const asyncHandler = require('../../../common/asyncHandler');
+// const asyncHandler = require('../../../common/asyncHandler');
+const {
+  asyncHandler
+} = require('@satish/common');
 
 exports.createUser = asyncHandler(async (req, res) => {
   const userId = req.headers['x-user-id'];

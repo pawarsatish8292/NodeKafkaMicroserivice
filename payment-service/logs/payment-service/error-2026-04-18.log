@@ -330,3 +330,9 @@
 {"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":2,"service":"payment-service","timestamp":"2026-04-18T00:54:35.370Z"}
 {"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":0,"service":"payment-service","timestamp":"2026-04-18T00:54:35.436Z"}
 {"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":0,"service":"payment-service","timestamp":"2026-04-18T00:54:35.478Z"}
+{"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":0,"service":"payment-service","timestamp":"2026-04-18T10:39:14.606Z"}
+{"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":1,"service":"payment-service","timestamp":"2026-04-18T10:39:14.625Z"}
+{"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":0,"service":"payment-service","timestamp":"2026-04-18T10:39:17.240Z"}
+{"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":1,"service":"payment-service","timestamp":"2026-04-18T10:39:17.245Z"}
+{"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":0,"service":"payment-service","timestamp":"2026-04-18T10:39:18.602Z"}
+{"env":"development","error":"Payment failed","level":"error","message":"Payment failed","retryCount":1,"service":"payment-service","timestamp":"2026-04-18T10:39:18.608Z"}

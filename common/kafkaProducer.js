@@ -4,33 +4,38 @@ const logger = require('./logger.js');
 let isConnected = false;
 
 const connectProducer = async () => {
-  if (!isConnected) {
-    await producer.connect();
-    isConnected = true;
-    logger.info('Kafka Producer connected');
+  let retries = 10;
+
+  while (retries) {
+    try {
+      await producer.connect();
+      isConnected = true;
+      logger.info('✅ Kafka Producer connected');
+      break;
+    } catch (err) {
+      logger.error('Kafka connection failed, retrying...', err);
+      retries--;
+      await new Promise(res => setTimeout(res, 5000));
+    }
   }
 };
 
 const sendMessage = async ({ topic, key, value }) => {
-  try {
+  if (!isConnected) {
     await connectProducer();
-
-    await producer.send({
-      topic,
-      messages: [
-        {
-          key: key ? String(key) : null,
-          value: JSON.stringify(value),
-        },
-      ],
-    });
-
-  } catch (err) {
-    logger.error('Kafka send failed', err);
-    throw err;
   }
+
+  await producer.send({
+    topic,
+    messages: [
+      {
+        key: String(key),
+        value: JSON.stringify(value),
+      },
+    ],
+  });
 };
 
 module.exports = {
-  sendMessage,
+  sendMessage,  // ✅ VERY IMPORTANT
 };

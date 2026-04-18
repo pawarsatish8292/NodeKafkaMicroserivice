@@ -6,39 +6,61 @@ const roleMiddleware = require('../middlewares/role.middleware.js');
 
 const router = express.Router();
 
-// 🔓 Public route
-router.use('/auth', proxy('http://localhost:3001'));
+// // 🔓 Public route
+// router.use('/auth', proxy('http://localhost:3001'));
 
-// 🔐 Protected routes
 // router.use(
 //   '/users',
 //   authMiddleware,
 //   proxy('http://localhost:3002', {
-//     parseReqBody: true, // 🔥 IMPORTANT
+//     parseReqBody: true,
+
+//     proxyReqPathResolver: (req) => {
+//       // 🔥 ALWAYS forward full path
+//       return `/users${req.url}`;
+//     },
 
 //     proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
 //       proxyReqOpts.headers['x-user-id'] = srcReq.user.id;
 //       proxyReqOpts.headers['x-user-role'] = srcReq.user.role;
 //       return proxyReqOpts;
-//     },
-
-//     proxyReqPathResolver: (req) => {
-//       return req.url; // forward correctly
 //     }
 //   })
 // );
 
+// // 🔐 RBAC protected
+// router.use(
+//   '/orders',
+//   authMiddleware,
+//   roleMiddleware(['admin', 'user']),
+//   proxy('http://localhost:3003', {
+//     parseReqBody: true,
+
+//     proxyReqPathResolver: (req) => {
+//       // 🔥 ALWAYS forward full path
+//       return `/orders${req.url}`;
+//     },
+
+//     proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+//       proxyReqOpts.headers['x-user-id'] = srcReq.user.id;
+//       proxyReqOpts.headers['x-user-role'] = srcReq.user.role;
+//       return proxyReqOpts;
+//     }
+//   })
+// );
+
+// module.exports = router;
+
+
+// 🔓 Public route
+router.use('/auth', proxy('http://auth-service:3000'));
+
 router.use(
   '/users',
   authMiddleware,
-  proxy('http://localhost:3002', {
+  proxy('http://user-service:3000', {
     parseReqBody: true,
-
-    proxyReqPathResolver: (req) => {
-      // 🔥 ALWAYS forward full path
-      return `/users${req.url}`;
-    },
-
+    proxyReqPathResolver: (req) => `/users${req.url}`,
     proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
       proxyReqOpts.headers['x-user-id'] = srcReq.user.id;
       proxyReqOpts.headers['x-user-role'] = srcReq.user.role;
@@ -47,19 +69,13 @@ router.use(
   })
 );
 
-// 🔐 RBAC protected
 router.use(
   '/orders',
   authMiddleware,
   roleMiddleware(['admin', 'user']),
-  proxy('http://localhost:3003', {
+  proxy('http://order-service:3000', {
     parseReqBody: true,
-
-    proxyReqPathResolver: (req) => {
-      // 🔥 ALWAYS forward full path
-      return `/orders${req.url}`;
-    },
-
+    proxyReqPathResolver: (req) => `/orders${req.url}`,
     proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
       proxyReqOpts.headers['x-user-id'] = srcReq.user.id;
       proxyReqOpts.headers['x-user-role'] = srcReq.user.role;
@@ -68,4 +84,4 @@ router.use(
   })
 );
 
-module.exports = router;
+ module.exports = router;

@@ -16,7 +16,7 @@ exports.register = async (data) => {
 
   const response = await http.callService({
     method: 'POST',
-    url: 'http://localhost:3002/users',
+    url: 'http://user-service:3000/users',
     data: {
       name: data.name,
       phone: data.phone,

@@ -19,7 +19,7 @@ app.use(middleware.requestLogger);
 
 // 🌍 2. CORS config
 app.use(cors({
-  origin: ['http://localhost:3000'], // restrict frontend
+  origin: ['http://host.docker.internal:3000'], // restrict frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
@@ -28,7 +28,7 @@ app.use(cors({
 // 🚫 3. Rate limiting
 app.use(rateLimit({
   windowMs: 60 * 1000,
-  max: 100
+  max: 5
 }));
 // WHY: prevent brute force / DDoS
 

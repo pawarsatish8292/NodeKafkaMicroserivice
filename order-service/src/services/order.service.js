@@ -5,10 +5,12 @@ const Order = require('../models/order.model.js');
 
 const {
   logger,
-  AppError
+  AppError,
+  kafka
 } = require('@satish/common');
 
-const { sendMessage } = require('../../../common/kafkaProducer.js');
+// const { sendMessage } = require('../../../common/kafkaProducer.js');
+
 
 exports.createOrder = async (data) => {
   const order = await Order.create({
@@ -31,7 +33,7 @@ exports.createOrder = async (data) => {
 
     // 3️⃣ Send to Kafka
   try {
-    await sendMessage({
+    await kafka.sendMessage({
       topic: 'order-created',
       key: order.id,
       value: event,

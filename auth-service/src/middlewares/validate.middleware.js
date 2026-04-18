@@ -1,4 +1,5 @@
-const AppError = require('../../../common/AppError.js');
+// const AppError = require('../../../common/AppError.js');
+const { AppError} = require('@satish/common');
 
 module.exports = (req, res, next) => {
   const { email, password } = req.body;

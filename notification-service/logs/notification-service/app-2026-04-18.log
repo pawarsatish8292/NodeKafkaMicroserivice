@@ -622,3 +622,32 @@
 {"email":"svpsatish5@gmail.com","env":"development","level":"info","message":"Email sent","orderId":268,"service":"notification-service","timestamp":"2026-04-18T07:57:29.212Z"}
 {"env":"development","level":"info","message":"Message received","partition":1,"service":"notification-service","timestamp":"2026-04-18T07:57:29.300Z","topic":"payment-success"}
 {"email":"svpsatish5@gmail.com","env":"development","level":"info","message":"Email sent","orderId":271,"service":"notification-service","timestamp":"2026-04-18T07:57:32.330Z"}
+{"env":"development","level":"info","message":"Starting Notification Service...","service":"notification-service","timestamp":"2026-04-18T10:19:36.536Z"}
+{"env":"development","level":"info","message":"Notification Service running on 3005","service":"notification-service","timestamp":"2026-04-18T10:19:36.540Z"}
+{"env":"development","level":"info","message":"Notification consumer started","service":"notification-service","timestamp":"2026-04-18T10:19:42.645Z"}
+{"env":"development","level":"info","message":"Message received","partition":2,"service":"notification-service","timestamp":"2026-04-18T10:21:21.972Z","topic":"payment-success"}
+{"email":"svpsatish5@gmail.com","env":"development","level":"info","message":"Email sent","orderId":274,"service":"notification-service","timestamp":"2026-04-18T10:21:25.048Z"}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"notification-service","timestamp":"2026-04-18T10:22:17.283Z","topic":"payment-success"}
+{"email":"svpsatish5@gmail.com","env":"development","level":"info","message":"Email sent","orderId":275,"service":"notification-service","timestamp":"2026-04-18T10:22:20.246Z"}
+{"env":"development","level":"info","message":"Message received","partition":1,"service":"notification-service","timestamp":"2026-04-18T10:22:20.274Z","topic":"payment-success"}
+{"email":"svpsatish5@gmail.com","env":"development","level":"info","message":"Email sent","orderId":276,"service":"notification-service","timestamp":"2026-04-18T10:22:23.318Z"}
+{"env":"development","level":"info","message":"Starting Notification Service...","service":"notification-service","timestamp":"2026-04-18T10:36:03.631Z"}
+{"env":"development","level":"info","message":"Notification Service running on 3005","service":"notification-service","timestamp":"2026-04-18T10:36:03.635Z"}
+{"env":"development","level":"info","message":"Notification consumer started","service":"notification-service","timestamp":"2026-04-18T10:36:09.714Z"}
+{"env":"development","level":"info","message":"Message received","partition":1,"service":"notification-service","timestamp":"2026-04-18T10:36:27.402Z","topic":"payment-success"}
+{"email":"svpsatish5@gmail.com","env":"development","level":"info","message":"Email sent","orderId":277,"service":"notification-service","timestamp":"2026-04-18T10:36:30.460Z"}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"notification-service","timestamp":"2026-04-18T10:37:45.124Z","topic":"payment-success"}
+{"email":"shindepoonam1998@gmail.com","env":"development","level":"info","message":"Email sent","orderId":278,"service":"notification-service","timestamp":"2026-04-18T10:37:48.091Z"}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"notification-service","timestamp":"2026-04-18T10:37:48.104Z","topic":"payment-success"}
+{"email":"shindepoonam1998@gmail.com","env":"development","level":"info","message":"Email sent","orderId":279,"service":"notification-service","timestamp":"2026-04-18T10:37:51.077Z"}
+{"env":"development","level":"info","message":"Message received","partition":1,"service":"notification-service","timestamp":"2026-04-18T10:39:14.638Z","topic":"payment-success"}
+{"email":"shindepoonam1998@gmail.com","env":"development","level":"info","message":"Email sent","orderId":280,"service":"notification-service","timestamp":"2026-04-18T10:39:17.232Z"}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"notification-service","timestamp":"2026-04-18T10:39:17.253Z","topic":"payment-success"}
+{"email":"shindepoonam1998@gmail.com","env":"development","level":"info","message":"Email sent","orderId":281,"service":"notification-service","timestamp":"2026-04-18T10:39:19.698Z"}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"notification-service","timestamp":"2026-04-18T10:39:19.714Z","topic":"payment-success"}
+{"email":"shindepoonam1998@gmail.com","env":"development","level":"info","message":"Email sent","orderId":282,"service":"notification-service","timestamp":"2026-04-18T10:39:22.724Z"}
+{"env":"development","level":"info","message":"Message received","partition":0,"service":"notification-service","timestamp":"2026-04-18T10:39:22.728Z","topic":"payment-success"}
+{"email":"shindepoonam1998@gmail.com","env":"development","level":"info","message":"Email sent","orderId":283,"service":"notification-service","timestamp":"2026-04-18T10:39:25.677Z"}
+{"env":"development","level":"info","message":"Message received","partition":2,"service":"notification-service","timestamp":"2026-04-18T10:39:25.688Z","topic":"payment-success"}
+{"email":"shindepoonam1998@gmail.com","env":"development","level":"info","message":"Email sent","orderId":284,"service":"notification-service","timestamp":"2026-04-18T10:39:28.702Z"}
+{"env":"development","level":"info","message":"Received SIGINT. Starting graceful shutdown...","service":"notification-service","timestamp":"2026-04-18T10:59:00.028Z"}

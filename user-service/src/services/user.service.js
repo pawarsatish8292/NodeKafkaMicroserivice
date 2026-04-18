@@ -1,6 +1,11 @@
 const repo = require('../repositories/user.repository');
-const logger = require('../../../common/logger.js');
-const AppError = require('../../../common/AppError');
+// const logger = require('../../../common/logger.js');
+// const AppError = require('../../../common/AppError');
+
+const {
+  AppError,
+  logger
+} = require('@satish/common');
 
 exports.createUser = async (data) => {
   logger.info('Creating user', { data });
