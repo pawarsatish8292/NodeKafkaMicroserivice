@@ -29,11 +29,12 @@ const handlePayment = async (data) => {
       key: data.orderId,
       value: data,
     });
+    console.log(`Payment success kafka send : ${data.orderId}`)
     logger.info('Payment success', data);
 
   } catch (err) {
     const retryCount = data.retryCount || 0;
-
+    console.log('Payment failed', { retryCount, error: err.message })
     logger.error('Payment failed', { retryCount, error: err.message });
 
     if (retryCount < MAX_RETRY) {
@@ -46,6 +47,7 @@ const handlePayment = async (data) => {
           retryCount: retryCount + 1,
         },
       });
+      console.log('Payment failed payment-retry : ', retryCount, data)
 
     } else {
       // ☠️ Send to DLQ
@@ -54,7 +56,7 @@ const handlePayment = async (data) => {
         key: data.orderId,
         value: data,
       });
-
+      console.log('Payment failed Moved to DLQ', data)
       logger.error('Moved to DLQ', data);
     }
   }
@@ -62,7 +64,7 @@ const handlePayment = async (data) => {
 
 // 🚀 Start consumers
 const run = async () => {
-
+  console.log(`startConsumer =======`);
   // Main topic
   await kafka.startConsumer({
     groupId: 'payment-group',
@@ -76,6 +78,7 @@ const run = async () => {
     topic: 'payment-retry',
     handler: handlePayment,
   });
+   console.log(`end =======`);
 };
 
 module.exports = run;

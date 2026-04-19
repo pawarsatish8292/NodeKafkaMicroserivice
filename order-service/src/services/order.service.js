@@ -39,9 +39,12 @@ exports.createOrder = async (data) => {
       value: event,
     });
 
+    console.log('🔥 EVENT SENT TO KAFKA:', order.id);
+
     logger.info('Order event sent to Kafka', event);
 
   } catch (err) {
+    console.log('🔥 EVENT Failed TO KAFKA:', order.id);
     logger.error('Kafka failed, implement outbox later', err);
   }
 

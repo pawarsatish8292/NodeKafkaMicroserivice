@@ -1,3 +1,6 @@
+const kafkaProducer = require('./kafkaProducer.js');
+const kafkaConsumer = require('./kafkaConsumer.js');
+
 module.exports = {
   // 🔥 Core
   AppError: require('./AppError.js'),
@@ -22,8 +25,13 @@ module.exports = {
   },
 
   // 🔥 Kafka
-  kafka: {
-    sendMessage: require('./kafkaProducer.js').sendMessage,
-    startConsumer: require('./kafkaConsumer.js').startConsumer,
+  // kafka: {
+  //   sendMessage: require('./kafkaProducer.js').sendMessage,
+  //   startConsumer: require('./kafkaConsumer.js').startConsumer,
+  // },
+
+    kafka: {
+    sendMessage: kafkaProducer.sendMessage,
+    startConsumer: kafkaConsumer.startConsumer,
   },
 };
