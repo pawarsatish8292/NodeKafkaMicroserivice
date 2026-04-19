@@ -1,5 +1,6 @@
-require('dotenv').config();
-
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 const express = require('express');
 const proxyRoutes = require('./routes/proxy.routes.js');
 const helmet = require('helmet');
@@ -7,7 +8,8 @@ const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 // const requestLogger = require('../../common/requestLogger.middleware.js');
 const {
-  middleware
+  middleware,
+  logger
 } = require('@satish/common');
 
 const app = express();
@@ -19,7 +21,7 @@ app.use(middleware.requestLogger);
 
 // 🌍 2. CORS config
 app.use(cors({
-  origin: ['http://host.docker.internal:3000'], // restrict frontend
+  origin: process.env.ALLOWED_ORIGINS?.split(',') || '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
@@ -28,7 +30,7 @@ app.use(cors({
 // 🚫 3. Rate limiting
 app.use(rateLimit({
   windowMs: 60 * 1000,
-  max: 5
+  max: 100
 }));
 // WHY: prevent brute force / DDoS
 
@@ -36,7 +38,7 @@ app.use(rateLimit({
 app.use(express.json());
 
 app.use((req, res, next) => {
-  console.log(`[Gateway] ${req.method} ${req.url}`);
+  logger.info(`[Gateway] ${req.method} ${req.url}`);
   next();
 });
 
@@ -50,5 +52,5 @@ app.get('/health', (req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log(`Gateway running on ${PORT}`);
+  logger.info(`Gateway running on ${PORT}`);
 });

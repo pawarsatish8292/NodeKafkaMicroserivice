@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: auth-config
+data:
+  PORT: "3000"
+  NODE_ENV: "production"
+  SERVICE_NAME: "auth-service"
+  DB_HOST: "host.minikube.internal"
+  DB_USER: "root"
+  DB_NAME: "auth_db"
+  USER_SERVICE_URL: "http://user:3000"

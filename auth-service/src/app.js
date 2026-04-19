@@ -3,10 +3,6 @@ require('dotenv').config();
 
 const express = require('express');
 const sequelize = require('./config/db.js');
-// const processHandlers = require('../../common/processHandlers.js');
-// const errorMiddleware = require('../../common/error.middleware.js')
-//const logger = require('../../common/logger.js');
-// const requestLogger = require('../../common/requestLogger.middleware.js');
 
 const {
   middleware,

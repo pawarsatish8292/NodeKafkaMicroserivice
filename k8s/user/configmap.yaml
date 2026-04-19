@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: user-config
+data:
+  PORT: "3000"
+  DB_HOST: "host.docker.internal"
+  DB_USER: "root"
+  DB_NAME: "user_db"
+  NODE_ENV: "production"
+  SERVICE_NAME: "user-service"

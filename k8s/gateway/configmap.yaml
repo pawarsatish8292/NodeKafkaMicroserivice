@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gateway-config
+data:
+  PORT: "3000"
+  NODE_ENV: "production"
+  SERVICE_NAME: "gateway"
+  AUTH_SERVICE_URL: "http://auth:3000"
+  USER_SERVICE_URL: "http://user:3000"
+  ORDER_SERVICE_URL: "http://order:3000"
+  ALLOWED_ORIGINS: "*"

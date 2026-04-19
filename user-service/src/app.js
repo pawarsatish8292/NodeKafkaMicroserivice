@@ -36,6 +36,11 @@ app.use((req, res, next) => {
 
 app.use('/users', userRoutes);
 
+// Health check
+app.get('/health', (req, res) => {
+  res.send('user service running');
+});
+
 // error handler
 app.use(middleware.error);
 

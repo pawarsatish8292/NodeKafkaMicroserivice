@@ -1,9 +1,8 @@
+require('dotenv').config();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const repo = require('../repositories/user.repository.js');
-// const AppError = require('../../../common/AppError.js');
-// const logger = require('../../../common/logger.js');
 const { http, logger, AppError} = require('@satish/common');
 
 exports.register = async (data) => {
@@ -16,7 +15,7 @@ exports.register = async (data) => {
 
   const response = await http.callService({
     method: 'POST',
-    url: 'http://user-service:3000/users',
+    url: `${process.env.USER_SERVICE_URL}/users`,
     data: {
       name: data.name,
       phone: data.phone,
